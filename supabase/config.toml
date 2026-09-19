@@ -1,0 +1,16 @@
+# Local Supabase CLI defaults for the Maliki database.
+# Run `supabase start` and `supabase db reset` from the repository root.
+project_id = "maliki"
+
+[db]
+major_version = 15
+
+[api]
+enabled = true
+schemas = ["public", "storage"]
+
+[auth]
+enabled = true
+
+[storage]
+enabled = true

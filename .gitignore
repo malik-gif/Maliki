@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+config.local.js
+.netlify/
+.supabase/
+node_modules/
+dist/
+coverage/
+*.log

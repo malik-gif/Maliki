@@ -18,13 +18,14 @@
 			<nav class="desktop-nav" aria-label="Primary navigation">
 				<a href="#/" data-route="home">Home</a><a href="#/browse" data-route="browse">Browse</a><a href="#/search" data-route="search">Search</a><a href="#/my-list" data-route="my-list">My List</a>
 			</nav>
-			<div class="top-actions"><button class="icon-btn search-trigger" data-action="search" aria-label="Search">⌕</button><button class="profile-chip" data-action="profile" aria-label="Open profile"><span class="avatar">A</span><span class="profile-name">Amina</span><span class="chevron">⌄</span></button></div>
+			<div class="top-actions" id="auth-nav"><button class="icon-btn search-trigger" data-action="search" aria-label="Search">⌕</button><a class="btn btn-secondary nav-auth-link" href="#/login">Sign in</a></div>
 		</header>
 		<main id="app" tabindex="-1"></main>
 		<nav class="mobile-nav" aria-label="Mobile navigation"><a href="#/" data-route="home"><span>⌂</span>Home</a><a href="#/browse" data-route="browse"><span>▦</span>Browse</a><a href="#/search" data-route="search"><span>⌕</span>Search</a><a href="#/my-list" data-route="my-list"><span>＋</span>My List</a></nav>
 		<footer class="site-footer"><div class="footer-brand"><span class="brand-mark">M</span><strong>maliki</strong><p>Stories worth staying up for.</p></div><div class="footer-links"><a href="#/browse">Browse</a><a href="#/my-list">My List</a><a href="#/profile">Account</a><a href="#/settings">Settings</a></div><div class="footer-meta"><span>© 2026 Maliki</span><span>Made for curious nights.</span></div></footer>
 	</div>
 	<div id="modal-root"></div><div id="toast-root" aria-live="polite"></div>
-	<script src="JS/script.js"></script>
+	<script src="config.local.js"></script>
+	<script type="module" src="JS/app.js"></script>
 </body>
 </html>
