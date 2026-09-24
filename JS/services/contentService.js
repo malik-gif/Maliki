@@ -7,7 +7,12 @@ const viteEnv = import.meta.env || {};
 const runtimeConfig = globalThis.MALIKI_CONFIG || {};
 
 function demoFallbackEnabled() {
-  return runtimeConfig.demoMode === true || viteEnv.VITE_DEMO_MODE === 'true' || ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const hasRuntimeSupabase = Boolean(runtimeConfig.supabaseUrl || runtimeConfig.supabaseAnonKey);
+  const hasViteSupabase = Boolean(viteEnv.VITE_SUPABASE_URL || viteEnv.VITE_SUPABASE_ANON_KEY);
+  return runtimeConfig.demoMode === true
+    || viteEnv.VITE_DEMO_MODE === 'true'
+    || ['localhost', '127.0.0.1'].includes(window.location.hostname)
+    || (!hasRuntimeSupabase && !hasViteSupabase);
 }
 
 export function normalizeContent(row, index = 0) {
